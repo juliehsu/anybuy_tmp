@@ -1,0 +1,19 @@
+<div class="well" >
+<h2 style="color:#1E90FF">會員管理</h2>
+<hr>
+
+<%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| %>
+
+<%= f.input :username, label:'姓名&nbsp;<span style="color:red">*</span>', label_html: { class: 'name' } %>
+
+<%= f.input :cname, label:'帳號&nbsp;<span style="color:red">*</span>' %>
+
+<%= f.input :address, label: '地址&nbsp;<span style="color:red">*</span>' %>
+
+<%= f.input :current_password, label: '請輸入密碼', hint: "請輸入密碼以確認修改會員資料" %>
+
+<%= f.submit "送出修改" %>
+  
+<% end %>
+
+</div>

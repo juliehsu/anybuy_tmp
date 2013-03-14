@@ -1,0 +1,40 @@
+<h1></h1>
+<div id="products">
+    <ul class="info well thumbnails">
+		<% @products.each do |product| %>
+	 <li class="span3">	 
+	    <div class="thumbnail">
+	   
+	        <%= link_to product.title, product, :class => "title" %>
+	        <% for image in product.images.limit(1) %>
+		<div class="index-img">
+	        <%= link_to image_tag(image.image.url(:medium)), product %>
+	          </div>
+		  <% end %>
+                 
+		<% @time = product.end_at.to_i %> 
+	        <%= content_tag(:span, "",:class => "kkcount-down", :time => @time ) %><br />
+    
+	       <%= content_tag :span, :class => "price" do %>
+		<%= product.price %>元<br />
+		<% end %>
+		
+		<% @bid_user.each do |user| %>
+		<%= user.username %><br />
+		<% end %>
+		
+		<%= button_to "下標", { :controller => 'bid', :action => 'biding', :id => product.id } , :class => "bidsubmit" %>
+		
+		
+		<%= link_to '刪除' , product, :method => :delete %>
+		
+		
+	    
+		 <% end %>
+		</div>
+           
+	  </li>
+    
+    </ul>
+</div>
+

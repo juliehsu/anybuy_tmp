@@ -1,0 +1,53 @@
+<p id="notice"><%= notice %></p>
+<div id="showwell" class="well">
+
+    <ul  class="s9 ">
+	
+	<%= link_to '首頁', products_path %>/<%= Categories.find(@product.categories_id)[:ptitle] %>
+        <% @product.images.each do |image| %>
+  
+      <li><%= image_tag(image.image.url(:medium), :class => "index-image") %></li>
+ 
+        <% end %>  
+	<li><hr></li>
+    </ul>
+
+     <ul class="s8">
+    	<li><h3 class="text-success"><%= @product.title %></h3></li>
+	<li><h5>金額：<%= @product.price %>元</h5></li>
+        <li>目前贏家：</li>
+	<li>目前競標價格：</li>
+	<li>商品定價：<%= @product.primary_price %>元</li>
+	<li>立即購買金額：<%= @product.primary_price %>元</li>
+	
+     </ul>
+
+
+<hr>
+      <ul class="sp">
+       <li><h4>競標注意事項</h4></li>
+	    
+       <li>每下標一次需消費 1 點。下標所消費的點數無論是最後是否得標均無法退還。 </li>
+       <li>非限量商品及非點數下標所消費的點數如未得標可使用立即購買折換為現金，於待繳金額中扣除。</li>
+       <li>限量商品以及點數競標是無法進行直接購買，若未得標，您於競標使用的點數，也無法退還。</li>
+       <li>參與競標時，系統會隨機配發一組競標專屬暱稱。結標後，紀錄會調整為真實會員暱稱，以示競標真實性。</li>
+       <li>畫面所顯示的剩餘時間及下標狀況，有可能因各人網路連線品質造成延遲現象。</li>
+       <li>本站準時結標，如因使用手機或低速無線網路連線，造成來不及下標，將不另作補償。 建議使用 Chrome，Firefox 及 Safari 的瀏覽器。</li>
+       <li>考量各會員頻寬不同，系統有可能在 0 秒後處理最後送入系統的下標資料，若於 0 秒後投標，非正常投標，無法保證可被接受。</li>
+       <li>本站無法保證每場拍賣的商品，您都能得標或以低價獲得。</li>
+       <li>網站主要的營運時間為上午 15:00 到 晚上 02:30，過了網站營運時間，所有正在競標中的商品結標時間會自動延長 12.5 小時。</li>
+ 
+<hr>
+	   
+	<li><h4>商品詳細介紹</h4></li>
+	<li><%= @product.description %></li>
+<hr>
+        <li><h4>付款資訊</h4></li>
+
+	<li>付款方式	ATM轉帳 / 信用卡線上付款 / iBon / 貨到付款</li>
+        <li>運費和手續費	120 元</li>
+        <li>購買限制說明	 請於本商品得標後的48小時內選擇付款方式如有任何相關問題，請與我們聯絡。</li>
+
+</ul>
+</div>
+
