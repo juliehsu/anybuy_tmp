@@ -1,8 +1,10 @@
-<h1>商品上架</h1>
-<div class="well">
-<%= simple_form_for @product, :url => products_path, :html => { :multipart => true } do |f| %>
-<%= render :partial => 'form', :locals => { :f => f } %>
-<%= f.submit "送出" %>
-<% end %> 
+<div class="container">
+	<h1>商品上架</h1>
+	<div class="well">
+		<%= simple_form_for @product, :url => products_path, :html => { :multipart => true } do |f| %>
+			<%= render :partial => 'form', :locals => { :f => f } %>
+			<%= f.submit "送出" %>
+		<% end %>
+	</div>
+	<%= link_to 'Back', products_path %>
 </div>
-<%= link_to 'Back', products_path %>

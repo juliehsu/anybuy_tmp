@@ -10,9 +10,9 @@ development:
   database: anybuydev
   host: localhost
   user: root
-  password: "123"
+  password: "dluiurgi"
   encoding: utf8
-  socket: /var/run/mysqld/mysqld.sock
+  socket: /var/run/mysql/mysql.sock
   pool: 5
   timeout: 5000
 
@@ -24,9 +24,9 @@ test:
   database: anybuytest
   host: localhost
   user: root
-  password: "123"
+  password: "dluiurgi"
   encoding: utf8
-  socket: /var/run/mysqld/mysqld.sock
+  socket: /var/run/mysql/mysql.sock
   pool: 5
   timeout: 5000
 
@@ -35,8 +35,8 @@ production:
   database: anybuy
   host: localhost
   user: root
-  password: "123"
+  password: "dluiurgi"
   encoding: utf8
-  sockrt: /var/run/mysqld/mysqld.sock
+  sockrt: /var/run/mysql/mysql.sock
   pool: 5
   timeout: 5000

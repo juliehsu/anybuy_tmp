@@ -10,7 +10,6 @@
  *
  *= require_self
  *= require_tree .
- *= requirebootstrap_and_overrides
  *= require products
  *= require jquery.ui.all
  */

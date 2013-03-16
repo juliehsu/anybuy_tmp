@@ -1,39 +1,40 @@
-<div class="well span12">
-<h3 class="user_title">新會員註冊</h3><hr>
-<p class="text-warning" style="font-size:15px;"><span style="color:red">*</span>&nbsp;為必填</p>
-<%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => {:class => ''} ) do |f| %>
- 
- <%= f.input :username, label:'姓名&nbsp;<span style="color:red">*</span>',
-     :error => true, input_html: { id: 'name' }, placeholder: "請輸入真實姓名。"%>
+<div class="container">
+	<h3 class="user_title">新會員註冊</h3><hr>
+	<p class="text-warning" style="font-size:15px;"><span style="color:red">*</span>&nbsp;為必填</p>
+	<%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => {:class => 'form form-horizontal'} ) do |f| %>
 
- <%= f.input :cname, label:'帳號&nbsp;<span style="color:red">*</span>', 
-       placeholder: "限英文和數字。" %>
-       
+		<%= f.input :username, label:'姓名&nbsp;<span style="color:red">*</span>',
+		  :error => true, input_html: { id: 'name' }, placeholder: "請輸入真實姓名。"%>
 
-  <%= f.input :password, label:'請輸入密碼&nbsp;<span style="color:red">*</span>', hint: false %>
+		<%= f.input :cname, label:'帳號&nbsp;<span style="color:red">*</span>',
+		  placeholder: "限英文和數字。" %>
 
-  <%= f.input :password_confirmation, label:'請再次輸入密碼&nbsp;<span style="color:red">*</span>', 
-      hint: false%>
-  
-  <%= f.input :nid, label: '身份證字號&nbsp;<span style="color:red">*</span>', 
-      placeholder: "贏家得標時需身分證核對來領取商品。" %>
-      
-  <%= f.input :email, label:'電子郵件&nbsp;<span style="color:red">*</span>', 
-      placeholder: 'user@domain.com'%>
-  
-  <%= f.input :address, label: '地址&nbsp;<span style="color:red">*</span>',
-     placeholder: "贏家得標時需地址核對寄送商品。" %>
-      
-  <%= f.input :phone, label:'手機&nbsp;<span style="color:red">*</span>', 
-      placeholder: "您將在10分鐘內收到手機認證簡訊通知" %>
 
-  <%= f.input :birthday, label:'生日&nbsp;<span style="color:red">*</span>', start_year: 1900, 
-                                     end_year: Time.now.year, input_html: { class: 'span2' }  %>
- 
-<hr>
-    <h4>服務條款</h4>
-<textarea id="terms" class="span9" rows="10">
-    
+		<%= f.input :password, label:'請輸入密碼&nbsp;<span style="color:red">*</span>', hint: false %>
+
+		<%= f.input :password_confirmation, label:'請再次輸入密碼&nbsp;<span style="color:red">*</span>',
+		  hint: false%>
+
+		<%= f.input :nid, label: '身份證字號&nbsp;<span style="color:red">*</span>',
+		  placeholder: "贏家得標時需身分證核對來領取商品。" %>
+
+		<%= f.input :email, label:'電子郵件&nbsp;<span style="color:red">*</span>',
+		  placeholder: 'user@domain.com'%>
+
+		<%= f.input :address, label: '地址&nbsp;<span style="color:red">*</span>',
+		  placeholder: "贏家得標時需地址核對寄送商品。" %>
+
+		<%= f.input :phone, label:'手機&nbsp;<span style="color:red">*</span>',
+		  placeholder: "您將在10分鐘內收到手機認證簡訊通知" %>
+
+		<%= f.input :birthday, label:'生日&nbsp;<span style="color:red">*</span>', start_year: 1900,
+		  end_year: Time.now.year, input_html: { class: 'span2' }  %>
+
+			<hr>
+			<h4>服務條款</h4>
+			<div class="controls">
+				<textarea id="terms" class="span9" rows="10" readonly="true">
+
 一般條款 / 概要
 下列之服務條款 (下稱服務條款) 適用於比得網路有限公司 (下稱 BID & BUY 網域「www.bidandbuy.com.tw」之提供者) 以及使用者 (下稱「您」或「您的」) 雙方之間。當您使用本服務時，即表示您同意接受本服務條款之所有內容，包括 BID & BUY 的運作方式。這些約定條款代表 BID & BUY 與您之間全部協議內容，並會取消或取代任何先前您與 BID & BUY 之間有關本服務所為之任何義務、保證或代理。
 BID & BUY 所提供的資訊，例如“客服專區”，僅屬推薦建議並非使用法則或是規範。BID & BUY 將不對已閱讀、已被告知此資訊或以其他書面資料告知之使用者或其他個體之行為負任何責任。
@@ -194,18 +195,18 @@ BID & BUY 商品購買之免責聲明和豁免條款
 注意事項：
 經常或反複地至 BID & BUY 進行線上下標會產生龐大的費用。我們建議所有使用者監控追蹤個人下標行為。請為您的下標行為負責。因此，使用者應注意他們的下標行為並定時地查看費用明細。
 
-    </textarea>
-
-    <div></div><br />
-    <%= f.input :terms_of_service, inline_label: '同意以上條款', as: :boolean %><br />
-
-        
-  <%= f.button :submit, "註冊", :class => 'btn btn-success btn-block ', :id => 'rebtn' %>
-<% end %>
-</div>
+				</textarea>
+			</div>
+<br/>
+			<%= f.input :terms_of_service, label:'&nbsp;', inline_label: '同意以上條款', as: :boolean %><br />
 
 
-	
-	
+			<%= f.button :submit, "註冊", :class => 'btn btn-success btn-block ', :id => 'rebtn' %>
+		<% end %>
+	</div>
+
+
+
+
 
 

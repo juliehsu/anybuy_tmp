@@ -1,0 +1,95 @@
+@import url(http://fonts.googleapis.com/css?family=Fjalla+One);
+@import url(http://fonts.googleapis.com/css?family=Lemon);
+body{
+	background: url(white_texture.png);
+}
+
+ul{
+	list-style: none;
+}
+
+.navbar-warpper{
+	margin-top:20px;
+	position:absolute;
+	top:0;
+	z-index:10;
+	width:100%;
+}
+.navbar{
+	font-size:15px;
+	width:960px;
+	margin:auto;
+}
+
+
+.navbar-inverse .brand, .navbar-inverse .nav>li>a{
+	/*	text-shadow:1px 1px #999; */
+}
+
+.navbar-inverse .nav>li.active>a{
+	/*	text-shadow:1px 1px #666;*/
+	font-weight:bold;
+}
+
+.navbar-inner{
+	box-shadow: 0 0 5px;
+}
+
+.container, #footwell, footer{
+	width:960px;
+	margin:auto;
+}
+
+.container{
+	margin-top:75px;
+	margin-bottom:10px;
+	padding:20px;
+	width:920px;
+	background-color: #f5f5f5;
+	border: 1px solid #e3e3e3;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.05);
+	-moz-box-shadow: inset 0 1px 1px rgba(0,0,0,0.05);
+	box-shadow: inset 0 1px 1px rgba(0,0,0,0.05);
+}
+
+.main-container{
+	min-height:600px;
+}
+
+#footwell{
+	height: 150px;
+	padding: 20px;
+	width:920px;
+	background-image: url(dark.png);
+}
+
+footer{
+	text-align:center;
+	padding: 5px 0 0;
+	font-size:12px;
+}
+
+#footwell ul {
+	float: left;
+	display: block;
+	margin-right: 87px;
+	margin: 0;
+	padding: 0 10px;
+	text-align: center;
+	letter-spacing: 3px;
+	margin:0 30px;
+}
+
+#footwell li, #footwell li a{
+	color: #ffffff;
+}
+
+#footwell .foot-title{
+	font-family: "Lemon", cursive;
+	font-weight: bolder;
+	font-size: 18px;
+	color: white;
+}
