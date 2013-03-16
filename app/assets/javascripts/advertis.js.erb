@@ -5,7 +5,7 @@
 			$slides = $('ul.list', $block),
 			_width = $block.width(),
 			$li = $('li', $slides),
-			_animateSpeed = 600, 
+			_animateSpeed = 600,
 			// 加入計時器, 輪播時間及控制開關
 			timer, _showSpeed = 3000, _stop = false;
 
@@ -21,7 +21,7 @@
 			// 把 .playerControl 移到置中的位置
 			return (_width - $(this).width()) / 2;
 		});
-		
+
 		// 幫 li 加上 click 事件
 		var $playerControlLi = $playerControl.find('li').click(function(){
 			var $this = $(this);
@@ -50,7 +50,7 @@
 			_stop = false;
 			timer = setTimeout(move, _showSpeed);
 		});
-		
+
 		// 計時器使用
 		function move(){
 			var _index = $('.current').index();

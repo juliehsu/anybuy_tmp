@@ -27,6 +27,14 @@
 	padding:10px;
 	background:#fff;
 	overflow:auto;
+	text-align: center;
+	color:#666;
+}
+
+#products .thumbnail .title{
+	display: block;
+	margin-bottom: 5px;
+	font-weight: bolder;
 }
 
 #products .index-img{
@@ -47,6 +55,7 @@
 	text-align: center;
 	display: block;
 	padding: 10px 5px;
+	font-weight: bold;
 }
 
 #products .thumbnail .countover{
@@ -55,4 +64,16 @@
 
 #products .thumbnail form{
 	margin:5px 0;
+}
+
+#products .thumbnail .price{
+	color: #16931A;
+	font-size: 26px;
+	font-weight: bolder;
+	display:block;
+	padding:8px;
+}
+
+#products .thumbnail .submitting{
+	background:#F9DDB8;
 }

@@ -24,10 +24,8 @@
 					</div>
 				<% end %>
 
-				<div class="desc">Some description here ... <br/>Some description here ... <br/>Some description here ... <br/></div>
-
 				<% @time = product.end_at.to_i %>
-				<%= content_tag(:span, "0d 00:00:00",:class => "countdown countthis", :time => @time) %>
+				<%= content_tag(:span, "--:--:--",:class => "countdown countthis", :time => @time) %>
 
 				<%= content_tag :span, :class => "price" do %>
 					<%= product.price %>元<br />
@@ -37,7 +35,7 @@
 					<%= user.username %><br />
 				<% end %>
 
-				<%= button_to "下標", { :controller => 'bid', :action => 'biding', :id => product.id } , :class => "bidsubmit"  , :disabled => true %>
+				<%= button_to "下標", { :controller => 'bid', :action => 'biding', :id => product.id } , :class => "bidsubmit btn", :disabled => true %>
 
 
 				<%= link_to '刪除' , product, :method => :delete %>

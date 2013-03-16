@@ -1,12 +1,12 @@
 <% if current_user %>
 	<li class="dropdown">
-		<a class="dropdown-toggle" data-toggle="dropdown" href="#">
-			<%= current_user.username %>
+		<a class="dropdown-toggle" role="button" data-toggle="dropdown" href="#">
+			<%= 'current_user.username' %>
 			<b class="caret"></b>
 		</a>
 		<ul class="dropdown-menu">
-			<li><%= link_to'會員管理', edit_registration_path(:user), :class => " icon-pencil" %></li>
-			<li><%= link_to '登出', destroy_user_session_path, :method => :delete, :class => "icon-off" %></li>
+			<li><%= link_to '<i class="icon-pencil"></i> 會員管理'.html_safe, edit_registration_path(:user) %></li>
+			<li><%= link_to '<i class="icon-off"></i> 登出'.html_safe, destroy_user_session_path, :method => :delete %></li>
 		</ul>
 	</li>
 <% else %>

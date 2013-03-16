@@ -7,6 +7,12 @@ $(function(){
 		interval: 5000
 	});
 	setInterval(function(){countdown()}, 1000);
+	$('.bidsubmit').click(function(){
+		var thisPrice = $('.price', $('.thumbnail').has(this));
+		thisPrice.addClass('submitting');
+		setTimeout(function(){thisPrice.removeClass('submitting');}, 1000);
+		return false;
+	});
 });
 
 function countdown(){
@@ -15,15 +21,14 @@ function countdown(){
 		var now = new Date();
 		now_secs = Math.round(now.getTime()/1000);
 		if(now_secs >= time){
-			$(this).html('0d 00:00:00');
+			$(this).html('--:--:--');
 			$(this).removeClass('countthis');
 			$(this).addClass('countover');
 			$('.bidsubmit', $('.thumbnail').has(this)).attr('disabled', 'disabled');
+			//$('.bidsubmit', $('.thumbnail').has(this)).removeAttr('disabled');
 		}
 		else{
 			var remain_secs = (time - now_secs);
-			var days = Math.floor(remain_secs / 86400);
-			remain_secs = remain_secs % 86400;
 
 			var hours = Math.floor(remain_secs / 3600);
 			if(hours.toString().length < 2){
@@ -37,7 +42,11 @@ function countdown(){
 			}
 			remain_secs = remain_secs % 60;
 
-			var count_str = days + 'd ' + hours + ':' + mins + ':' + remain_secs;
+			if(remain_secs.toString().length < 2){
+				remain_secs = '0' + remain_secs.toString();
+			}
+
+			var count_str = hours + ':' + mins + ':' + remain_secs;
 			$(this).html(count_str);
 			$('.bidsubmit', $('.thumbnail').has(this)).removeAttr('disabled');
 		}
