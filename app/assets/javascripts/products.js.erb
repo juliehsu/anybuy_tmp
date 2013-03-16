@@ -6,12 +6,12 @@ $(function(){
 	$('.carousel').carousel( {
 		interval: 5000
 	});
+	countdown();
 	setInterval(function(){countdown()}, 1000);
 	$('.bidsubmit').click(function(){
 		var thisPrice = $('.price', $('.thumbnail').has(this));
 		thisPrice.addClass('submitting');
 		setTimeout(function(){thisPrice.removeClass('submitting');}, 1000);
-		return false;
 	});
 });
 
@@ -24,11 +24,17 @@ function countdown(){
 			$(this).html('--:--:--');
 			$(this).removeClass('countthis');
 			$(this).addClass('countover');
+			$('.bidsubmit', $('.thumbnail').has(this)).val('已結標');
 			$('.bidsubmit', $('.thumbnail').has(this)).attr('disabled', 'disabled');
 			//$('.bidsubmit', $('.thumbnail').has(this)).removeAttr('disabled');
 		}
 		else{
 			var remain_secs = (time - now_secs);
+			var thisCounter = $(this);
+			if(re_main_secs <= 10){
+				thisCounter.addClass('countover');
+				setTimeout(function(){thisCounter.removeClass('countover');}, 500);
+			}
 
 			var hours = Math.floor(remain_secs / 3600);
 			if(hours.toString().length < 2){
