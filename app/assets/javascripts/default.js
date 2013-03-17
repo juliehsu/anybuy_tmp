@@ -5,4 +5,6 @@
 
 $(function(){
 	$('.dropdown-toggle').dropdown();
+	$('#loginModal').modal({backdrop:true, show:false});
 });
+

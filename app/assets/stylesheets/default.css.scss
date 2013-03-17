@@ -8,17 +8,10 @@ ul{
 	list-style: none;
 }
 
-.navbar-warpper{
-	margin-top:20px;
-	position:absolute;
-	top:0;
-	z-index:10;
-	width:100%;
-}
 .navbar{
 	font-size:15px;
-	width:960px;
-	margin:auto;
+	box-shadow: 0 0 5px;
+	background:#000;
 }
 
 
@@ -32,7 +25,8 @@ ul{
 }
 
 .navbar-inner{
-	box-shadow: 0 0 5px;
+	width:960px;
+	margin:auto;
 }
 
 .container, #footwell, footer{
@@ -41,7 +35,7 @@ ul{
 }
 
 .container{
-	margin-top:75px;
+	margin-top:50px;
 	margin-bottom:10px;
 	padding:20px;
 	width:920px;
@@ -92,4 +86,9 @@ footer{
 	font-weight: bolder;
 	font-size: 18px;
 	color: white;
+}
+
+.modal-backdrop, .modal-backdrop.fade.in{
+	opacity: 0.5;
+	filter: alpha(opacity=50);
 }

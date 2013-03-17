@@ -9,9 +9,14 @@ $(function(){
 	countdown();
 	setInterval(function(){countdown()}, 1000);
 	$('.bidsubmit').click(function(){
-		var thisPrice = $('.price', $('.thumbnail').has(this));
+		var thisPrice = $('.price', $('.countdown_holder').has(this));
 		thisPrice.addClass('submitting');
 		setTimeout(function(){thisPrice.removeClass('submitting');}, 1000);
+		return false;
+	});
+	$('#product_show .product_info .image.thmbnl').click(function(){
+		var bg_url = $(this).css('background-image');
+		$('#product_show .product_info .image.main').css('background-image', bg_url);
 	});
 });
 
@@ -24,14 +29,14 @@ function countdown(){
 			$(this).html('--:--:--');
 			$(this).removeClass('countthis');
 			$(this).addClass('countover');
-			$('.bidsubmit', $('.thumbnail').has(this)).val('已結標');
-			$('.bidsubmit', $('.thumbnail').has(this)).attr('disabled', 'disabled');
-			//$('.bidsubmit', $('.thumbnail').has(this)).removeAttr('disabled');
+			$('.bidsubmit', $('.countdown_holder').has(this)).val('已結標');
+			$('.bidsubmit', $('.countdown_holder').has(this)).attr('disabled', 'disabled');
+			//$('.bidsubmit', $('.countdown_holder').has(this)).removeAttr('disabled');
 		}
 		else{
 			var remain_secs = (time - now_secs);
 			var thisCounter = $(this);
-			if(re_main_secs <= 10){
+			if(remain_secs <= 10){
 				thisCounter.addClass('countover');
 				setTimeout(function(){thisCounter.removeClass('countover');}, 500);
 			}
@@ -54,7 +59,7 @@ function countdown(){
 
 			var count_str = hours + ':' + mins + ':' + remain_secs;
 			$(this).html(count_str);
-			$('.bidsubmit', $('.thumbnail').has(this)).removeAttr('disabled');
+			$('.bidsubmit', $('.countdown_holder').has(this)).removeAttr('disabled');
 		}
 	});
 }

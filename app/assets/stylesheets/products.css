@@ -1,7 +1,12 @@
 #myCarousel {
 	width:960px;
-	margin: 75px auto 10px;
+	margin: 40px auto 10px;
 }
+
+.carousel-control{
+	top:50%;
+}
+
 .carousel img{
 	width:100%;
 	height:300px;
@@ -50,7 +55,7 @@
 	font-size: 14px;
 }
 
-#products .thumbnail .countdown{
+.countdown{
 	font-size: 28px;
 	text-align: center;
 	display: block;
@@ -58,7 +63,7 @@
 	font-weight: bold;
 }
 
-#products .thumbnail .countover{
+.countover{
 	color:red;
 }
 
@@ -66,7 +71,7 @@
 	margin:5px 0;
 }
 
-#products .thumbnail .price{
+.price{
 	color: #16931A;
 	font-size: 26px;
 	font-weight: bolder;
@@ -74,6 +79,184 @@
 	padding:8px;
 }
 
-#products .thumbnail .submitting{
+.submitting{
 	background:#F9DDB8;
+}
+
+#product_show .product_info > div{
+	/*border: 1px solid #333;*/
+	height:400px;
+	border:1px solid #eee;
+	background:#fff;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	-webkit-box-shadow: 0 0 2px #aaa;
+	-moz-box-shadow:  0 0 2px #aaa;
+	box-shadow:  0 0 2px #aaa;
+	padding:15px 20px;
+	float:left;
+}
+
+#product_show .breadcrumbs{
+}
+
+#product_show .product_info{
+	clear:both;
+	padding:5px 0;
+	overflow: auto;
+}
+
+#product_show .product_info .photos{
+	width:292px;
+	text-align:center;
+	margin-left:3px;
+	padding-right:0;
+}
+
+#product_show .product_info .bid-info{
+	width:248px;
+	margin-left:10px;
+	text-align:center;
+}
+
+#product_show .product_info .bid-history{
+	width:248px;
+	margin-left:10px;
+	position:relative;
+}
+
+#product_show .product_info .image{
+	background-size:cover;
+	background-repeat: no-repeat;
+	background-position:50% 50%;
+}
+
+#product_show .product_info .image.main{
+	background-size:contain;
+	width: 270px;
+	height: 270px;
+	margin:0px 0 20px;
+	border:none;
+}
+
+#product_show .product_info .image.thmbnl{
+	float:left;
+	width:80px;
+	height:65px;
+	margin-right:13px;
+	display:inline-block;
+	border:1px solid #eee;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	-webkit-box-shadow: 0 0 1px #aaa;
+	-moz-box-shadow:  0 0 1px #aaa;
+	box-shadow:  0 0 1px #aaa;
+	cursor:pointer;
+}
+#product_show .product_title{
+	background:#fff;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	-webkit-box-shadow: 0 0 3px #aaa;
+	-moz-box-shadow:  0 0 3px #aaa;
+	box-shadow:  0 0 3px #aaa;
+	padding:5px 20px;
+	margin:10px 3px;
+}
+
+#product_show .product_info .bid-info .picture{
+	margin-bottom:10px;
+}
+
+#product_show .product_info .bid-info form{
+	margin: 15px;
+}
+
+#product_show .product_info .bid-info .current-bid{
+	margin:0;
+	padding:10px;
+	text-align:left;
+	font-size:12px;
+	background: #eee;
+}
+#product_show .product_info .bid-info .current-bid hr{
+	margin:0;
+}
+
+#product_show .product_info .bid-info .current-bid .highlight{
+	font-weight: bolder;
+	color: inherit;
+}
+
+#product_show .product_info .bid-info .current-bid .value{
+	float:right;
+	font-weight: normal;
+}
+
+#product_show .product_info .bid-info .buy_now{
+	font-size:18px;
+	float:none;
+}
+
+#product_show .product_info .bid-history .table{
+	font-size:12px;
+}
+
+#product_show .product_info .bid-history .table th, #product_show .product_info .bid-history .table td{
+	line-height:12px;
+}
+
+.table th.text-center, .table td.text-center{
+	text-align:center;
+}
+
+#product_show .product_info .bid-history .history-title{
+	font-size:18px;
+	margin-bottom:6px;
+	text-align:center;
+	color:rgb(255, 116, 0);
+}
+
+#product_show .product_info .bid-history .auto-bid{
+	position:absolute;
+	width:228px;
+	bottom:20px;
+	padding:10px;
+	border: 1px solid #eee;
+	background:#f9f9f9;
+}
+
+#product_show .product_info .bid-history .auto-bid input[type=text]{
+	margin:0;
+	height:14px;
+	font-size:12px;
+}
+
+#product_show .product_info .bid-history .auto-bid.form-horizontal .control-group{
+	margin:5px 0;
+}
+
+#product_show .product_info .bid-history .auto-bid.form-horizontal .control-label{
+	text-align:left;
+	width:100px;
+	margin-left:20px;
+	padding-top:2px;
+}
+
+#product_show .product_info .bid-history .auto-bid.form-horizontal .controls {
+	margin-left: 0px;
+}
+
+#product_show .product_info .bid-history .auto-bid .title, #product_show .product_info .bid-history .auto-bid .button-row{
+	text-align:center;
+}
+
+#product_show .product_info .bid-history .auto-bid .title{
+	font-size:18px;
+	margin-bottom:6px;
+	text-align:center;
+	color:rgb(255, 116, 0);
 }

@@ -17,7 +17,7 @@
 <div id="products" class="container main-container">
 	<ul>
 		<% @products.each do |product| %>
-			<li class="thumbnail">
+			<li class="thumbnail countdown_holder">
 				<%= link_to product.title, product, :class => "title" %>
 				<% for image in product.images.limit(1) %>
 					<div class="index-img" style="background-image:url(<%= image.image.url(:medium) %>)" >
