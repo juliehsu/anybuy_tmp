@@ -37,10 +37,9 @@
 
 				<%= button_to "下標", { :controller => 'bid', :action => 'biding', :id => product.id } , :class => "bidsubmit btn", :disabled => true %>
 
-
+                <% if current_user && current_user.is_admin? %>
 				<%= link_to '刪除' , product, :method => :delete %>
-
-
+                <% end %>
 
 			<% end %>
 		</li>
