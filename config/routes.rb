@@ -16,7 +16,9 @@ Anybuy::Application.routes.draw do
 
   get "about/home"
 
-  devise_for :users
+  devise_for :users do 
+   get "/users/sign_out" => "devise/sessions#destroy", :as => :destroy_user_session
+   end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
