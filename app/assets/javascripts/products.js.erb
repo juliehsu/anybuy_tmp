@@ -26,7 +26,7 @@ function countdown(){
 		var now = new Date();
 		now_secs = Math.round(now.getTime()/1000);
 		if(now_secs >= time){
-			$(this).html('--:--:--');
+			$(this).html('已結標');
 			$(this).removeClass('countthis');
 			$(this).addClass('countover');
 			$('.bidsubmit', $('.countdown_holder').has(this)).val('已結標');

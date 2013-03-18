@@ -36,6 +36,14 @@
 	color:#666;
 }
 
+#products .thumbnail:hover{
+	order: 1px solid red;
+	box-shadow: 0 0 15px -1px;
+	-moz-box-shadow: 0 0 15px -1px;
+	-webkit-box-shadow: 0 0 15px -1px;
+	color: red;
+}
+
 #products .thumbnail .title{
 	display: block;
 	margin-bottom: 5px;
