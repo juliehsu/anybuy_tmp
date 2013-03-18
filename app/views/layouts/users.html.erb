@@ -35,8 +35,7 @@
 		<%= favicon_link_tag 'favicon.ico', :rel => 'shortcut icon' %>
 	</head>
 	<body>
-		<div class="navbar-warpper">
-			<div class="navbar navbar-inverse" id="topbar">
+		<div class="navbar navbar-inverse navbar-fixed-top" id="topbar">
 				<div class="navbar-inner">
 					<a class="brand" href="http://<%= request.host_with_port %>/ ">AnyBuy</a>
 					<ul class="nav">
@@ -50,27 +49,26 @@
 					</ul>
 				</div>
 			</div>
-		</div>
 
 		<%= yield %>
 
 		<div id="footwell" class="well">
 			<ul>
 				<li class="foot-title"><h4>About 關於</h4></li>
-				<li><a href="http://localhost:3000/about/home" class="about-txt">關於我們</a></li>
-				<li><a href="http://localhost:3000/about/news" class="about-txt">最新消息</a></li>
+				<li><a href="http://<%= request.host_with_port %>/about/home" class="about-txt">關於我們</a></li>
+				<li><a href="http://<%= request.host_with_port %>/about/news" class="about-txt">最新消息</a></li>
 
 			</ul>
 			<ul>
 				<li class="foot-title"><h4>Help 幫助</h4></li>
-				<li><a href="http://localhost:3000/help/tiro" class="help-txt">新手教學</a></li>
-				<li><a href="http://localhost:3000/help/question" class="help-txt">常見問題</a></li>
-				<li><a href="http://localhost:3000/help/contact" class="help-txt">聯絡我們</a></li>
+				<li><a href="http://<%= request.host_with_port %>/help/tiro" class="help-txt">新手教學</a></li>
+				<li><a href="http://<%= request.host_with_port %>/help/question" class="help-txt">常見問題</a></li>
+				<li><a href="http://<%= request.host_with_port %>/help/contact" class="help-txt">聯絡我們</a></li>
 			</ul>
 			<ul>
 				<li class="foot-title"><h4>Other 其它</h4></li>
-				<li><a href="http://localhost:3000/other/clause1" class="other-txt">隱私權政策</a></li>
-				<li><a href="http://localhost:3000/other/clause2" class="other-txt">服務條款</a></li>
+				<li><a href="http://<%= request.host_with_port %>/other/clause1" class="other-txt">隱私權政策</a></li>
+				<li><a href="http://<%= request.host_with_port %>/other/clause2" class="other-txt">服務條款</a></li>
 
 			</ul>
 		</div>
@@ -94,11 +92,9 @@
 
 						<div class="control-group password optional"><label class="password optional control-label" for="user_password">密碼</label><div class="controls"><input class="password optional" id="user_password" name="user[password]" size="50" type="password" /></div></div>
 
+						<div class="control-group boolean optional"><div class="controls"><input name="user[remember_me]" type="hidden" value="0" /><label class="checkbox"><input class="boolean optional" id="user_remember_me" name="user[remember_me]" type="checkbox" value="1" />記得我</label></div></div>
 
-						<div class="control-group boolean optional"><label class="boolean optional control-label" for="user_remember_me">記得我</label><div class="controls"><input name="user[remember_me]" type="hidden" value="0" /><label class="checkbox"><input class="boolean optional" id="user_remember_me" name="user[remember_me]" type="checkbox" value="1" /></label></div></div>
-
-
-						<input class="btn btn-primary btn-block " id="loginbtn" name="commit" type="submit" value="登入" />
+						<div class="control-group"><div class="controls"><input class="btn btn-primary span3" id="loginbtn" name="commit" type="submit" value="登入" /></div></div>
 
 					</form>
 				</div>
