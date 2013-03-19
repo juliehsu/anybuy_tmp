@@ -201,7 +201,11 @@ BID & BUY 商品購買之免責聲明和豁免條款
 			<%= f.input :terms_of_service, label:'&nbsp;', inline_label: '同意以上條款', as: :boolean %><br />
 
 
-			<%= f.button :submit, "註冊", :class => 'btn btn-success btn-block ', :id => 'rebtn' %>
+			<div class="control-group">
+				<div class="controls">
+					<%= f.button :submit, "註冊", :class => 'btn btn-success span8', :id => 'rebtn' %>
+				</div>
+			</div>
 		<% end %>
 	</div>
 
