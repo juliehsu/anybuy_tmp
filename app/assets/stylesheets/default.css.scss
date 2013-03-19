@@ -107,3 +107,24 @@ footer{
 	opacity: 0.5;
 	filter: alpha(opacity=50);
 }
+
+.btn-purple {
+	color: #ffffff;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+	background-color: #ab26b4;
+	background-image: -moz-linear-gradient(top, #b742c5, #9710a6);
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#b742c5), to(#9710a6));
+	background-image: -webkit-linear-gradient(top, #b742c5, #9710a6);
+	background-image: -o-linear-gradient(top, #b742c5, #9710a6);
+	background-image: linear-gradient(to bottom, #b742c5, #9710a6);
+	background-repeat: repeat-x;
+	border-color: #9710a6 #9710a6 #7d2587;
+	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffb742c5', endColorstr='#ff9710a6', GradientType=0);
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+}
+
+.btn-purple:hover, .btn-purple:focus, .btn-purple:active, .btn-purple.active, .btn-purple.disabled, .btn-purple[disabled] {
+	color: #ffffff;
+	background-color: #9710a6;
+}
