@@ -15,8 +15,8 @@
 #products{
 	width:938px;
 	margin-top: 10px;
-	padding:20px 0px 20px 20px;
-	min-height:422px;
+	padding:20px 0px 0px 20px;
+	min-height:402px;
 }
 
 #products ul, #products ul li{
@@ -34,6 +34,7 @@
 	overflow:auto;
 	text-align: center;
 	color:#666;
+	margin-bottom:20px;
 }
 
 #products .thumbnail:hover{
