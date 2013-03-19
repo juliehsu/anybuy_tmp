@@ -2,6 +2,10 @@
 Anybuy::Application.routes.draw do
  
   
+  get "member/index"
+
+  get "order/buymoney"
+
   get "other/clause1"
 
   get "other/clause2"

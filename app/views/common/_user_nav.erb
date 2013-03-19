@@ -6,10 +6,10 @@
 		</a>
 		<ul class="dropdown-menu">
 			<li><%= link_to '<i class="icon-pencil"></i> 會員管理'.html_safe, edit_registration_path(:user) %></li>
-			<li><%= link_to '<i class="icon-off"></i> 登出'.html_safe, destroy_user_session_path, :method => :delete %></li>
+			<li><%= link_to( '<i class="icon-off"></i> 登出'.html_safe, destroy_user_session_path, :method => :delete) %></li>
 		</ul>
 	</li>
 <% else %>
-	<li><%= link_to'註冊', new_registration_path(:user) %></li>
+	<li><%= link_to '註冊', new_registration_path(:user) %></li>
 	<li><a href="#loginModal" role="button" data-toggle="modal">登入</a></li>
 <% end %>
