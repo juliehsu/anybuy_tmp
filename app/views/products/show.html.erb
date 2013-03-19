@@ -2,7 +2,7 @@
 	<p id="notice"><%= notice %></p>
 
 	<div class="breadcrumbs">
-		<%= link_to '首頁', products_path %> / <%= Categories.find(@product.categories_id)[:ptitle] %>
+		<%= link_to '首頁', products_path %> <span class="breadcromb-separate">/</span> <%= Categories.find(@product.categories_id)[:ptitle] %>
 	</div>
 	<div class="product_title">
 		<h3 class="text-success"><%= @product.title %></h3>
