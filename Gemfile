@@ -13,7 +13,7 @@ gem 'paperclip','3.3.1'
 gem 'rails_admin'    #後台管理
 gem 'magic_encoding' #utf-8
 gem 'cancan'
-gem 'ckeditor'       #for WYSIWYG
+gem 'ckeditor', '4.0.1'      #for WYSIWYG
 gem 'simple_form'    #表單
 gem 'redis_captcha'
 gem 'capybara' 
