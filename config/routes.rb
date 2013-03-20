@@ -2,6 +2,8 @@
 Anybuy::Application.routes.draw do
  
   
+  mount Ckeditor::Engine => '/ckeditor'
+
   get "member/index"
 
   get "order/buymoney"
