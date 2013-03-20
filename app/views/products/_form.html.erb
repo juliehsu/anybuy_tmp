@@ -17,7 +17,7 @@
       
       <%= f.input :title, label:'商品標題' %>
 
-      <%= f.input :description, label:'商品描述' %>
+      <%= f.input :description, label:'商品描述', :as => :ckeditor, :input_html => { :ckeditor => {:toolbar => 'Full'} } %>
         
       <%= f.input :primary_price, label:"商品原價", input_html: {class: 'span2'} %>
       
