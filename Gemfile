@@ -9,7 +9,7 @@ gem 'sqlite3'
 gem 'mysql2'
 #外掛
 gem 'devise'         #會員登入界面
-gem 'paperclip','3.3.1'
+gem 'paperclip', :git => "git://github.com/thoughtbot/paperclip.git"
 gem 'rails_admin'    #後台管理
 gem 'magic_encoding' #utf-8
 gem 'cancan'
