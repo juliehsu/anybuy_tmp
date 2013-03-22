@@ -20,7 +20,7 @@
 			<li class="thumbnail countdown_holder">
 				<%= link_to product.title, product, :class => "title" %>
 				<% for image in product.images.limit(1) %>
-					<div class="index-img" style="background-image:url(<%= image.image.url(:medium) %>)" >
+					<div class="index-img" style="background-image:url(<%= image.image.url(:medium)  %>)" >
 					</div>
 				<% end %>
 
@@ -35,10 +35,10 @@
 					<%= user.username %><br />
 				<% end %>
 
-				<%= button_to "下標", { :controller => 'bid', :action => 'biding', :id => product.id } , :class => "bidsubmit btn", :disabled => true %>
+				<%= button_to "下標", { :controller => 'bid', :action => 'biding'}, :id => product.id  , :class => "bidsubmit btn", :disabled => true %>
 
 				<% if current_user && current_user.is_admin? %>
-					<%= link_to '刪除' , product, :method => :delete %>
+					<%= button_to '刪除' , product_path(product), :method => :delete %>
 				<% end %>
 			</li>
 
