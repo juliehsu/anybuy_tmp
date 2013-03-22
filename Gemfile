@@ -40,6 +40,7 @@ end
 group :test, :development do 
   gem 'rspec'
   gem 'rspec-rails'
+  gem 'watchr'
 end
 
 gem 'jquery-rails'
