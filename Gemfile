@@ -8,13 +8,13 @@ gem 'libv8', '~> 3.11.8'
 gem 'sqlite3'
 gem 'mysql2'
 #外掛
-gem 'devise'         #會員登入界面
-gem 'paperclip', :git => "git://github.com/thoughtbot/paperclip.git"
-gem 'rails_admin'    #後台管理
+gem 'devise', '2.1.2'         #會員登入界面
+gem 'paperclip', '3.4.0'
+gem 'rails_admin', '0.3.0'    #後台管理
 gem 'magic_encoding' #utf-8
-gem 'cancan'
+gem 'cancan', '1.6.8'
 gem 'ckeditor', '4.0.1'      #for WYSIWYG
-gem 'simple_form'    #表單
+gem 'simple_form', '2.0.4'    #表單
 gem 'redis_captcha'
 gem 'capybara' 
 
