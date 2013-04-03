@@ -103,7 +103,7 @@ GEM
     nested_form (0.3.1)
     nokogiri (1.5.6)
     orm_adapter (0.4.0)
-    paperclip (3.3.1)
+    paperclip (3.4.0)
       activemodel (>= 3.0.0)
       activerecord (>= 3.0.0)
       activesupport (>= 3.0.0)
@@ -223,10 +223,10 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  cancan
+  cancan (= 1.6.8)
   capybara
   ckeditor (= 4.0.1)
-  devise
+  devise (= 2.1.2)
   jquery-rails
   jquery-ui-rails
   less-rails
@@ -234,13 +234,13 @@ DEPENDENCIES
   magic_encoding
   mini_magick
   mysql2
-  paperclip (= 3.3.1)
+  paperclip (= 3.4.0)
   rails (= 3.2.8)
-  rails_admin
+  rails_admin (= 0.3.0)
   redis_captcha
   rspec
   rspec-rails
-  simple_form
+  simple_form (= 2.0.4)
   sqlite3
   therubyracer (~> 0.11.1)
   twitter-bootstrap-rails

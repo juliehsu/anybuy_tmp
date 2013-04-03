@@ -18,8 +18,6 @@ Anybuy::Application.routes.draw do
 
   get "help/contact"
 
-  get "about/news"
-
   get "about/home"
 
   devise_for :users do 
