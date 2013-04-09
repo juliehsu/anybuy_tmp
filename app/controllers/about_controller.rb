@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class AboutController < ApplicationController
   def message
    @messages = Message.order("created_at DESC").all
@@ -41,5 +42,9 @@ class AboutController < ApplicationController
     respond_to do |format|
       format.html { redirect_to :action => :message}
     end
+  end
+  
+  def home
+  @title = "關於我們"
   end
 end

@@ -4,6 +4,7 @@ Anybuy::Application.routes.draw do
   resources :about do 
    collection do
     get :message
+    get :home
    end
   end
   
