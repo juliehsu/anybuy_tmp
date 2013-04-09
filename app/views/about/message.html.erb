@@ -3,13 +3,17 @@
 <hr>
   <% @messages.each do |message| %>
     <div class="message-title">
-      <p><%= message.created_at.strftime("%Y %B %d") %> <%= message.title %></p>
+      <p><%= message.created_at.strftime("%Y-%m-%d") %>&nbsp;&nbsp; <%= message.title %></p>
     </div>
 
     <div class="message-content">
        <p><%= message.content %></p>       
     </div>
+     <% if current_user && current_user.is_admin? %>
+        <%= button_to '刪除' , about_path(message), :method => :delete %>
+    <% end %>
      <hr style="border:1 dashed #987cb9" width="80%" color=#1A1A1A SIZE=1>
+    
 <% end %>
 
 
