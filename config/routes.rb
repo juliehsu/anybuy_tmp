@@ -1,6 +1,11 @@
 # -*- encoding : utf-8 -*-
 Anybuy::Application.routes.draw do
  
+  resources :about do 
+   collection do
+    get :message
+   end
+  end
   
   mount Ckeditor::Engine => '/ckeditor'
 

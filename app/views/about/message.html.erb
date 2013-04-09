@@ -1,0 +1,16 @@
+<div class="ab-container main-container">
+  <h1>最新消息</h1>
+<hr>
+  <% @messages.each do |message| %>
+    <div class="message-title">
+      <p><%= message.created_at.strftime("%Y %B %d") %> <%= message.title %></p>
+    </div>
+
+    <div class="message-content">
+       <p><%= message.content %></p>       
+    </div>
+     <hr style="border:1 dashed #987cb9" width="80%" color=#1A1A1A SIZE=1>
+<% end %>
+
+
+</div>
