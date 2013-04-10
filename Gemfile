@@ -17,6 +17,8 @@ gem 'ckeditor', '4.0.1'      #for WYSIWYG
 gem 'simple_form', '2.0.4'    #表單
 gem 'redis_captcha'
 gem 'capybara' 
+gem "kaminari"               #分頁
+gem 'kaminari-i18n'          
 
 #gem 'nokogiri', '1.5.6'
 #gem 'libxml2'

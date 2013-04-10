@@ -1,7 +1,7 @@
 # -*- encoding : utf-8 -*-
 class AboutController < ApplicationController
   def message
-   @messages = Message.order("created_at DESC").all
+   @messages = Message.order("created_at DESC").page(params[:page]).per(5)
   end
   
   def new
