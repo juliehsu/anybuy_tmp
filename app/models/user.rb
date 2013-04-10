@@ -20,9 +20,9 @@ class User < ActiveRecord::Base
   validates :username, :cname, 
 	    :length => {:minimum => 2, :maximum => 10 }
 
-  validates_length_of :password, :password_confirmation, :is => 6
-  validates_length_of :phone, :nid, :is => 10
+  validates_length_of :password, :password_confirmation, :minimum => 6
+  validates_length_of :phone, :nid, :minimum => 10
   validates_numericality_of :phone, :only_integer => true
   validates_format_of :email, :with => /\A([\w\.%\+\-]+)@([\w\-]+\.)+([\w]{2,})\z/i
-  # attr_accessible :title, :body
+
 end
