@@ -11,7 +11,7 @@
 
 		<% if devise_mapping.rememberable? -%>
 
-			<%= f.input :remember_me, :label=>'&nbsp;', inline_label:'記得我', :as => :boolean  %>
+			<%= f.input :remember_me, :label=>'&nbsp;', inline_label:'記得我', :as => :boolean, input_html: { value: '0' }  %>
 
 		<% end -%>
 

@@ -1,6 +1,15 @@
 # -*- encoding : utf-8 -*-
 Anybuy::Application.routes.draw do
  
+ devise_for :users do 
+   get "/users/sign_out" => "devise/sessions#destroy", :as => :destroy_user_session
+   end
+   
+ resources :products 
+    
+ resources :bids
+    match '/bid' => 'bid#biding'
+    
   resources :about do 
    collection do
     get :message
@@ -8,6 +17,13 @@ Anybuy::Application.routes.draw do
    end
   end
   
+  resources :help do
+     collection do 
+      get :tiro
+      get :question
+      get :contact
+     end
+    end
   mount Ckeditor::Engine => '/ckeditor'
 
   get "member/index"
@@ -17,26 +33,10 @@ Anybuy::Application.routes.draw do
   get "other/clause1"
 
   get "other/clause2"
-
-  get "help/tiro"
-
-  get "help/question"
-
-  get "help/contact"
-
-  get "about/home"
-
-  devise_for :users do 
-   get "/users/sign_out" => "devise/sessions#destroy", :as => :destroy_user_session
-   end
-
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
-    resources :products 
     
-
-    resources :bids
-    match '/bid' => 'bid#biding'
     #post "bids/biding" => "bid#update"
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'

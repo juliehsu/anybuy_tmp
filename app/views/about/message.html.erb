@@ -1,7 +1,7 @@
 <div class="ab-container main-container">
     
-  <h1>最新消息</h1>
-<hr>
+  <h3>最新消息</h3>
+<hr />
   <% @messages.each do |message| %>
     <div class="message-title">
       <p><%= message.created_at.strftime("%Y-%m-%d") %>&nbsp;&nbsp; <%= message.title %></p>
