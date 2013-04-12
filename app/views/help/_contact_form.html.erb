@@ -1,8 +1,25 @@
+<% if current_user && current_user.is_admin? %>
   
-  <%= f.input :username, label: '姓名', placeholder: "#{current_user.username}" %> 
+  <%= f.input :username, label: '姓名', input_html: {value: "#{current_user.username}"}, disabled: true %> 
 
-  <%= f.input :phone, label:'聯絡電話', placeholder: "#{current_user.phone}" %> 
+  <%= f.input :phone, label:'聯絡電話', input_html: {value: "#{current_user.phone}"}, disabled: true %> 
 
-  <%= f.input :email, label:'Email', placeholder: "#{current_user.email}"%> 
+  <%= f.input :email, label:'Email', input_html: {value: "#{current_user.email}"}, disabled: true %> 
+  
+  <%= f.input :title, label:'主題' %>
 
   <%= f.input :contact_message, label: '內容'  %>
+
+    <% else %>
+
+ <%= f.input :username, label: '姓名' %> 
+
+  <%= f.input :phone, label:'聯絡電話' %> 
+
+  <%= f.input :email, label:'Email'%> 
+  
+  <%= f.input :title, label:'主題' %>
+
+  <%= f.input :contact_message, label: '內容'  %>
+
+<% end %>

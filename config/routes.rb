@@ -16,12 +16,14 @@ Anybuy::Application.routes.draw do
     get :home
    end
   end
-  
+ 
   resources :help do
-     collection do 
+     collection do
+      get :contact_index
+      get :contact_show
+      get :contact
       get :tiro
       get :question
-      get :contact
      end
     end
   mount Ckeditor::Engine => '/ckeditor'

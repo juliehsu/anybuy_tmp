@@ -1,13 +1,15 @@
 # -*- encoding : utf-8 -*-
 class HelpController < ApplicationController
-  def tiro
-  @title = "新手教學"
-  end
 
-  def question
-  @title = "常見問題"
+  def contact_index
+    @contacts = Contact.order("created_at DESC").page(params[:page]).per(5)
   end
-
+  
+  def contact_show 
+    @contact = Contact.find(params[:id])
+   
+  end
+  
   def contact
     @title = "聯絡我們"
     @contact = Contact.new  
@@ -16,10 +18,6 @@ class HelpController < ApplicationController
     end
   end
   
-  def new
-  
-  end
-    
   def create
     @contact = Contact.new(params[:contact])
   
@@ -33,12 +31,22 @@ class HelpController < ApplicationController
   end
   
   def destory
-    @coontact = Contact.find(params[:id])
+    @contact = Contact.find(params[:id])
     @contact.destroy
 
     respond_to do |format|
       format.html { redirect_to :action => :contact}
     end
+  end
+  
+  
+  
+  def tiro
+    @title = "新手教學"
+  end
+
+  def question
+    @title = "常見問題"
   end
   
 end

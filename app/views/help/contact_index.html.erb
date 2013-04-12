@@ -1,0 +1,9 @@
+<div class="ab-container main-container">
+    <div class= "show_contact">
+       <% @contacts.each do |contact| %>
+      <li> 問題時間: <%= contact.created_at.strftime("%Y-%m-%d") %> </li> 
+      <li> 問題標題: <%= link_to contact.title, contact_show_help_index_path(contact) %> </li>
+      <li> 問題內容: <%= contact.contact_message %> </li>
+      <% end %>
+    </div>
+</div>
