@@ -4,7 +4,7 @@
 	<%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => {:class => 'form form-horizontal'} ) do |f| %>
 
 		<%= f.input :username, label:'姓名&nbsp;<span style="color:red">*</span>',
-		  :error => true, input_html: { id: 'name' }, placeholder: "請輸入真實姓名。"%>
+		  :error => true, input_html: { id: 'name' }, placeholder: "請輸入真實姓名。", :autofocus => true%>
 
 		<%= f.input :cname, label:'帳號&nbsp;<span style="color:red">*</span>',
 		  placeholder: "限英文和數字。" %>

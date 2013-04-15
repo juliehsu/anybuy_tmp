@@ -5,7 +5,7 @@
 
 	<%= simple_form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => {:class => 'form-horizontal'} ) do |f| %>
 
-		<%= f.input :username, label:'帳號'%>
+		<%= f.input :username, label:'帳號', :autofocus => true %>
 
 		<%= f.input :password, label:'密碼', hint: false %>
 
