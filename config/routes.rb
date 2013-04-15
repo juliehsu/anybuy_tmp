@@ -1,31 +1,31 @@
 # -*- encoding : utf-8 -*-
 Anybuy::Application.routes.draw do
  
- devise_for :users do 
+  devise_for :users do 
    get "/users/sign_out" => "devise/sessions#destroy", :as => :destroy_user_session
    end
    
- resources :products 
+  resources :products 
     
- resources :bids
+  resources :bids
     match '/bid' => 'bid#biding'
     
   resources :about do 
-   collection do
+    collection do
     get :message
     get :home
-   end
-  end
- 
-  resources :help do
-     collection do
-      get :contact_index
-      get :contact_show
-      get :contact
-      get :tiro
-      get :question
-     end
     end
+   end
+  
+    match 'help/contact_index' => 'help#contact_index', :via => [:get]
+    match 'help/contact_show/:id' => 'help#contact_show', :as => "contact_show", :via => [:get]
+    match 'help/contact' => 'help#contact', :via => [:get]
+    match 'help/contact_create' => 'help#contact_create', :via => [:post]
+    match 'help/contact_destroy/:id' => 'help#contact_destroy', :via => [:delete]
+    get "help/tiro"
+    get "help/question"
+
+
   mount Ckeditor::Engine => '/ckeditor'
 
   get "member/index"

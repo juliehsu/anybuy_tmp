@@ -2,7 +2,7 @@
 class ProductsController < ApplicationController
 http_basic_authenticate_with :name => "admin", :password => "123"  
  before_filter :authenticate_user! , :except => [ :show, :index ]	
- #layout "product", :only => :show
+ 
  # GET /products
   # GET /products.json
   def index
@@ -31,13 +31,19 @@ http_basic_authenticate_with :name => "admin", :password => "123"
   # GET /products/new
   # GET /products/new.json
   def new
-    @title = "新商品上架"
-    @product = Product.new
+    if current_user && current_user.is_admin
+      @title = "新商品上架"
+      @product = Product.new
     
-    3.times { @product.images.build }
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @product }
+      3.times { @product.images.build }
+       respond_to do |format|
+        format.html # new.html.erb
+        format.json { render json: @product }
+      end
+    else
+      respond_to do |format|
+       format.html { redirect_to :action => :index }
+       end
     end
   end
 

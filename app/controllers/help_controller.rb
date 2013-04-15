@@ -1,13 +1,24 @@
 # -*- encoding : utf-8 -*-
 class HelpController < ApplicationController
-
+#before_filter :authenticate_admin!, :except => [:contact, :tiro, :question]
   def contact_index
+    if current_user && current_user.is_admin
     @contacts = Contact.order("created_at DESC").page(params[:page]).per(5)
+      else
+      respond_to do |format|
+      format.html { redirect_to :action => :contact }
+     end
+    end
   end
   
   def contact_show 
+    if current_user && current_user.is_admin
     @contact = Contact.find(params[:id])
-   
+    else
+     respond_to do |format|
+     format.html { redirect_to :action => :contact }
+     end
+    end
   end
   
   def contact
@@ -18,7 +29,7 @@ class HelpController < ApplicationController
     end
   end
   
-  def create
+  def contact_create
     @contact = Contact.new(params[:contact])
   
   respond_to do |format|
@@ -30,7 +41,7 @@ class HelpController < ApplicationController
     end
   end
   
-  def destory
+  def contact_destroy
     @contact = Contact.find(params[:id])
     @contact.destroy
 
