@@ -50,7 +50,6 @@ ActiveRecord::Schema.define(:version => 20130411085300) do
     t.string   "email"
     t.string   "title"
     t.text     "contact_message"
-    t.datetime "create_at"
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
   end

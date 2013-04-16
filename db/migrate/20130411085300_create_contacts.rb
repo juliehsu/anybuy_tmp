@@ -6,7 +6,6 @@ class CreateContacts < ActiveRecord::Migration
       t.string :email
       t.string :title
       t.text :contact_message
-      t.datetime :create_at
       t.timestamps
     end
   end

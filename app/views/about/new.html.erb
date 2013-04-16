@@ -1,8 +1,8 @@
 <div class="ab-container">
-<%= simple_form_for @message, :url => about_index_path do |f| %>  
- 
-    <%= render :partial => 'message_form', :locals => { :f => f } %>
-  
-  <%= f.submit "送出" %>  
-<% end %>  
+    <h4>發佈最新消息</h4>
+    <hr />
+        <%= simple_form_for @message, :url => about_index_path do |f| %>  
+            <%= render :partial => 'message_form', :locals => { :f => f } %>
+            <%= f.submit "送出" %>  
+        <% end %>  
 </div>
