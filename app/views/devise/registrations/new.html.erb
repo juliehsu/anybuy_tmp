@@ -3,32 +3,33 @@
 	<p class="text-warning" style="font-size:15px;"><span style="color:red">*</span>&nbsp;為必填</p>
 	<%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => {:class => 'form form-horizontal'} ) do |f| %>
 
-		<%= f.input :username, label:'姓名&nbsp;<span style="color:red">*</span>',
-		  :error => true, input_html: { id: 'name' }, placeholder: "請輸入真實姓名。", :autofocus => true%>
+		<%= f.input :username, label:'姓名&nbsp;',
+		  :error => true, input_html: { id: 'name', class: 'span4' }, placeholder: "請輸入真實姓名。", :autofocus => true%>
 
-		<%= f.input :cname, label:'帳號&nbsp;<span style="color:red">*</span>',
-		  placeholder: "限英文和數字。" %>
+		<%= f.input :cname, label:'帳號&nbsp;',
+		  placeholder: "限英文和數字。", input_html: { class: 'span4' } %>
 
 
-		<%= f.input :password, label:'請輸入密碼&nbsp;<span style="color:red">*</span>', hint: false %>
+		<%= f.input :password, label:'請輸入密碼&nbsp;', hint: false, input_html: { class: 'span4' } %>
 
-		<%= f.input :password_confirmation, label:'請再次輸入密碼&nbsp;<span style="color:red">*</span>',
-		  hint: false%>
+		<%= f.input :password_confirmation, label:'請再次輸入密碼&nbsp;',
+		  hint: false, input_html: { class: 'span4' }%>
 
-		<%= f.input :nid, label: '身份證字號&nbsp;<span style="color:red">*</span>',
-		  placeholder: "贏家得標時需身分證核對來領取商品。" %>
+		<%= f.input :nid, label: '身份證字號&nbsp;',
+		  placeholder: "贏家得標時需身分證核對來領取商品。" , input_html: { class: 'span4' }%>
 
-		<%= f.input :email, label:'電子郵件&nbsp;<span style="color:red">*</span>',
-		  placeholder: 'user@domain.com'%>
-
-		<%= f.input :address, label: '地址&nbsp;<span style="color:red">*</span>',
-		  placeholder: "贏家得標時需地址核對寄送商品。" %>
-
-		<%= f.input :phone, label:'手機&nbsp;<span style="color:red">*</span>',
-		  placeholder: "您將在10分鐘內收到手機認證簡訊通知" %>
-
-		<%= f.input :birthday, label:'生日&nbsp;<span style="color:red">*</span>', start_year: 1900,
+		<%= f.input :email, label:'電子郵件&nbsp;',
+		  placeholder: 'user@domain.com', input_html: { class: 'span4' }%>
+		  
+		  <%= f.input :phone, label:'手機&nbsp;',
+		  placeholder: "您將在10分鐘內收到手機認證簡訊通知", input_html: { class: 'span4' }  %>
+		  
+		  <%= f.input :birthday, label:'生日&nbsp;', start_year: 1900,
 		  end_year: Time.now.year, input_html: { class: 'span2' }  %>
+
+		<%= f.input :address, label: '地址&nbsp;',
+		  placeholder: "贏家得標時需地址核對寄送商品。", input_html: { class: 'span8' }  %>
+
 
 			<hr>
 			<h4>服務條款</h4>

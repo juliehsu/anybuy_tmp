@@ -1,6 +1,6 @@
 # -*- encoding : utf-8 -*-
 class ProductsController < ApplicationController
-http_basic_authenticate_with :name => "admin", :password => "123"  
+#http_basic_authenticate_with :name => "admin", :password => "123"  
  before_filter :authenticate_user! , :except => [ :show, :index ]	
  
  # GET /products

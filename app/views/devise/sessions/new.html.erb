@@ -1,19 +1,19 @@
-<div class="ab-container">
+<div class="ab-container" >
 
 	<h3 class="user_title">會員登入</h3>
 	<hr>
 
-	<%= simple_form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => {:class => 'form-horizontal'} ) do |f| %>
+	<%= simple_form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => { :class => 'form-horizontal'} ) do |f| %>
 
-		<%= f.input :username, label:'帳號', :autofocus => true %>
+		<%= f.input :username, label:'帳號', :autofocus => true, :required => true ,:wrapper => :bootstrap %>
 
-		<%= f.input :password, label:'密碼', hint: false %>
+		<%= f.input :password, label:'密碼', hint: false, :required => true %>
 
-		<% if devise_mapping.rememberable? -%>
+		<% if devise_mapping.rememberable? %>
 
-			<%= f.input :remember_me, :label=>'&nbsp;', inline_label:'記得我', :as => :boolean, input_html: { value: '0' }  %>
+			<%= f.input :remember_me, :label=>'&nbsp;', inline_label:'記得我', :as => :boolean, input_html: { value: '1' }  %>
 
-		<% end -%>
+		<% end %>
 
 	<div class="control-group">
 		<div class="controls"><%= f.submit "登入", :class => "btn btn-primary span3", :id => 'loginbtn' %></div>

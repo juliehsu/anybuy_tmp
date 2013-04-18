@@ -1,0 +1,22 @@
+#contact .btn {
+		margin-left: 300px;
+}
+
+#contact .contact_label{
+		margin:0;
+		float: left;
+		text-align: left;
+		padding-right: 0 px;
+		
+}
+
+
+
+#contact input{
+		margin:0px;
+		
+}
+
+#contact p{
+		#line-height:12px;
+}

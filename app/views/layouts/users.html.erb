@@ -89,11 +89,11 @@
 				<div class="modal-body">
 					<form accept-charset="UTF-8" action="/users/sign_in" class="simple_form form-horizontal" id="new_user" method="post" novalidate="novalidate"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="C8x8LuctfBuAgC+NqK0Ywn6rABntmi+YEAJmz1llVTA=" /></div>
 
-						<div class="control-group string optional"><label class="string optional control-label" for="user_username">帳號</label><div class="controls"><input class="string optional" id="user_username" name="user[username]" size="50" type="text" /></div></div>
+						<div class="control-group string optional"><label class="string optional control-label" for="user_username">帳號</label><div class="controls"><input class="string optional" id="user_username" name="user[username]" size="50" type="text" required="required" autofocus="autofocus" /></div></div>
 
 						<div class="control-group password optional"><label class="password optional control-label" for="user_password">密碼</label><div class="controls"><input class="password optional" id="user_password" name="user[password]" size="50" type="password" /></div></div>
 
-						<div class="control-group boolean optional"><div class="controls"><input name="user[remember_me]" type="hidden" value="0" /><label class="checkbox"><input class="boolean optional" id="user_remember_me" name="user[remember_me]" type="checkbox" value="1" />記得我</label></div></div>
+						<div class="control-group boolean optional"><div class="controls"><input name="user[remember_me]" type="hidden" value="1" /><label class="checkbox"><input class="boolean optional" id="user_remember_me" name="user[remember_me]" type="checkbox" value="1" />記得我</label></div></div>
 
 						<div class="control-group"><div class="controls"><input class="btn btn-primary span3" id="loginbtn" name="commit" type="submit" value="登入" /></div></div>
 
