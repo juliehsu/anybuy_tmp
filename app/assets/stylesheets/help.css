@@ -2,19 +2,18 @@
 		margin-left: 300px;
 }
 
-#contact .contact_label{
-		margin:0;
-		float: left;
+#contact .control-label{
 		text-align: left;
-		padding-right: 0 px;
-		
+		padding-right: 0px;
+		width:70px;
 }
 
 
 
 #contact input{
-		margin:0px;
-		
+		float:left;
+		margin-left:0px;
+		padding: 0 auto;
 }
 
 #contact p{
