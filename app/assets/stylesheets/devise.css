@@ -1,0 +1,32 @@
+#new-registrations .control-label{
+		text-align: left;
+		padding-left: 10px;
+		width:120px;
+}
+
+#new-registrations hr {
+		margin: 8px 0 20px 0;
+		padding-top:0;
+		border: 0;
+		border-top: 1px dashed #BFBFBF;
+		border-bottom: 1px dashed #BFBFBF;
+}
+
+#edit-registrations .control-label {
+		text-align: left;
+		padding-left: 10px;
+		width:120px;
+}
+
+#edit-registrations hr {
+		margin: 8px 0 20px 0;
+		padding-top:0;
+		border: 0;
+		border-top: 1px dashed #BFBFBF;
+		border-bottom: 1px dashed #BFBFBF;
+}
+
+#edit-registrations .btn {
+		margin-left: 180px;
+}
+

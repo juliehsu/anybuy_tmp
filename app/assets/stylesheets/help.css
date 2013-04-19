@@ -1,5 +1,5 @@
 #contact .btn {
-		margin-left: 300px;
+		margin-left: 400px;
 }
 
 #contact .control-label{
@@ -10,12 +10,13 @@
 
 
 
-#contact input{
-		float:left;
+#contact .controls{
 		margin-left:0px;
-		padding: 0 auto;
+
+
 }
 
-#contact p{
-		#line-height:12px;
+#contact .help-block{
+		text-align: left;
+		margin-left: 70px;
 }

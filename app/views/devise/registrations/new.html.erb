@@ -1,19 +1,18 @@
-<div class="ab-container">
+<div class="ab-container" id="new-registrations">
 	<h3 class="user_title">新會員註冊</h3><hr>
-	<p class="text-warning" style="font-size:15px;"><span style="color:red">*</span>&nbsp;為必填</p>
+	<p class="text-warning" style="font-size:15px;"><span style="color:red">*</span>&nbsp;為必填</p> <br />
 	<%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => {:class => 'form form-horizontal'} ) do |f| %>
 
 		<%= f.input :username, label:'姓名&nbsp;',
-		  :error => true, input_html: { id: 'name', class: 'span4' }, placeholder: "請輸入真實姓名。", :autofocus => true%>
+		  :error => true, input_html: { class: 'span4' }, placeholder: "請輸入真實姓名。", :autofocus => true%>
 
 		<%= f.input :cname, label:'帳號&nbsp;',
 		  placeholder: "限英文和數字。", input_html: { class: 'span4' } %>
 
 
-		<%= f.input :password, label:'請輸入密碼&nbsp;', hint: false, input_html: { class: 'span4' } %>
+		<%= f.input :password, label:'請輸入密碼&nbsp;',  input_html: { class: 'span4' } %>
 
-		<%= f.input :password_confirmation, label:'請再次輸入密碼&nbsp;',
-		  hint: false, input_html: { class: 'span4' }%>
+		<%= f.input :password_confirmation, label:'請再次輸入密碼&nbsp;', input_html: { class: 'span4' }%>
 
 		<%= f.input :nid, label: '身份證字號&nbsp;',
 		  placeholder: "贏家得標時需身分證核對來領取商品。" , input_html: { class: 'span4' }%>
@@ -204,7 +203,7 @@ BID & BUY 商品購買之免責聲明和豁免條款
 
 			<div class="control-group">
 				<div class="controls">
-					<%= f.button :submit, "註冊", :class => 'btn btn-success span8', :id => 'rebtn' %>
+					<%= f.button :submit, "註冊", :class => 'btn btn-success span8' %>
 				</div>
 			</div>
 		<% end %>

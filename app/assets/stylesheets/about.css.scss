@@ -1,19 +1,26 @@
 // Place all the styles related to the about controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.message {
+        background-image:url(light_wool.png);
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        border-radius: 10px;
+}
 .message-title {
-    color: #00B500;
-    font-size:14px;
+        color: #00B500;
+        font-size:14px;
+        font-weight: bold ;
+        padding: 10px 0 10px 16px ;
 }
 
 .message-content {
-    margin:0;
-    padding:10px;
-    text-align:left;
-    font-size:12px
+        padding: 5px 0 10px 16px ;
+        text-align:left;
+        font-size:14px
 }
 
 .kaminari {
-    margin:0;
+        margin-left:310px;
 
 }

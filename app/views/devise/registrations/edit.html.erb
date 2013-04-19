@@ -1,30 +1,30 @@
 <%= render :partial => 'member/sidebar' %>
 
-<div class="ab-container span9" >
+<div class="ab-container span9", id="edit-registrations" >
 	<h3 style="color:#1E90FF">會員管理</h3>
 	<hr>
 
-	<%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| %>
+	<%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put, :class => 'form form-horizontal' }) do |f| %>
 
-		<%= f.input :username,  disabled: true, label:'姓名&nbsp;<span style="color:red">*</span>', label_html: { class: 'name' } %>
+	<%= f.input :username,  disabled: true, label:'姓名&nbsp; ', input_html: { class: 'span5' }%>
         
-		<%= f.input :cname,  disabled: true, label:'帳號&nbsp;<span style="color:red">*</span>' %>
+	<%= f.input :cname,  disabled: true, label:'帳號', input_html: { class: 'span5' } %>
 
-        <%= f.input :nid,  disabled: true, label: '身份證字號&nbsp;<span style="color:red">*</span>' %>
+        <%= f.input :nid,  disabled: true, label: '身份證字號&nbsp; ', input_html: { class: 'span5' } %>
         
-        <%= f.input :birthday,  disabled: true, label: '生日&nbsp;<span style="color:red">*</span>' %>
+        <%= f.input :birthday,  disabled: true, label: '生日', as: :string, input_html: { class: 'span5' } %>
         
-        <%= f.input :email,  label: '電子郵件&nbsp;<span style="color:red">*</span>' %>
+        <%= f.input :email,  label: '電子郵件&nbsp; ', input_html: { class: 'span5' } %>
         
-        <%= f.input :phone,  disabled: true, label: '手機&nbsp;<span style="color:red">*</span>' %>
+        <%= f.input :phone,  disabled: true, label: '手機&nbsp; ', input_html: { class: 'span5' } %>
         
-		<%= f.input :address, label: '地址&nbsp;<span style="color:red">*</span>' %>
-		
-		
+	<%= f.input :address, label: '地址&nbsp; ', input_html: { class: 'span8' }  %>
 
-		<%= f.input :current_password, label: '請輸入密碼', hint: "請輸入密碼以確認修改會員資料" %>
+	<%= f.input :current_password, label: '請輸入密碼', hint: "請輸入密碼以確認修改會員資料" %>
+	
+	<hr />
 
-		<%= f.submit "送出修改" %>
+	<%= f.submit "送出修改", class: 'btn btn-success' %>
 
 	<% end %>
 
