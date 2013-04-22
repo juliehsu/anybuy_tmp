@@ -39,5 +39,5 @@ Anybuy::Application.configure do
   config.assets.debug = true
 	Paperclip.options[:command_path] = "/usr/local/bin/"
 
-  config.serve_static_assets = false
+  #config.serve_static_assets = false
 end
