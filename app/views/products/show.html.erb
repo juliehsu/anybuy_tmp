@@ -10,14 +10,14 @@
 	</div>
 	<div class="product_info">
 		<div class="photos">
-			<% @product.images.each do |image| %>
-
-			<div class="image main" style="background-image:url(<%= image.image.url(:medium) %>)" ></div>
 			
+			<% for image in @product.images.limit(1) %>
+			<div class="image main" style="background-image:url(<%= image.image.url(:medium) %>)" ></div>
+			<% end %>
+			<% for image in @product.images.limit(2) %>
 			<div class="image thmbnl" style="background-image:url(<%= image.image.url(:medium) %>)" ></div>
 			<% end %>
-			<div class="image thmbnl" style="background-image:url()"></div>
-			<div class="image thmbnl" style="background-image:url()"></div>
+
 			
 		</div>
 		
