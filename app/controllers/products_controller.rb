@@ -7,7 +7,7 @@ class ProductsController < ApplicationController
   # GET /products.json
   def index
     @title = "AnyBuy"
-    @products = Product.find(:all)
+    @products = Product.order("created_at DESC").page(params[:page]).per(11)
     @bid_user = User.find_by_sql("SELECT  users.username FROM  products, users
                                        WHERE products.winner_id = users.id")
     respond_to do |format|
