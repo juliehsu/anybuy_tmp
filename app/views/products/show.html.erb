@@ -12,12 +12,13 @@
 		<div class="photos">
 			
 			<% for image in @product.images.limit(1) %>
-			<div class="image main" style="background-image:url(<%= image.image.url(:medium) %>)" ></div>
+			<div class="image main" style="background-image:url(<%= image.image.url(:medium)  %>)" ></div>
 			<% end %>
+			
 			<% for image in @product.images.limit(2) %>
-			<div class="image thmbnl" style="background-image:url(<%= image.image.url(:medium) %>)" ></div>
+			<div class="image thmbnl" style="background-image:url(<%= image.image.url(:medium)  %>)" ></div>
 			<% end %>
-
+			
 			
 		</div>
 		
