@@ -14,7 +14,9 @@
 			<%= f.input :remember_me, :label=>'&nbsp;', inline_label:'記得我', :as => :boolean, input_html: { value: '1' }  %>
 
 		<% end %>
-
+		
+	<%= link_to image_tag("facebook.png", :size => "64x64", :alt => "Facebook"), user_omniauth_authorize_path(:facebook) %>
+	
 	<div class="control-group">
 		<div class="controls"><%= f.submit "登入", :class => "btn btn-primary span3", :id => 'loginbtn' %></div>
 	</div>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130411085300) do
+ActiveRecord::Schema.define(:version => 20130424063924) do
 
   create_table "bids", :force => true do |t|
     t.integer  "user_id"
@@ -108,6 +108,9 @@ ActiveRecord::Schema.define(:version => 20130411085300) do
     t.string   "excerpt_image_content_type"
     t.integer  "excerpt_image_file_size"
     t.datetime "excerpt_image_updated_at"
+    t.string   "name"
+    t.integer  "uid"
+    t.string   "provider"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

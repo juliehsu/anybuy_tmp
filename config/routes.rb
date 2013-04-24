@@ -1,9 +1,11 @@
 # -*- encoding : utf-8 -*-
 Anybuy::Application.routes.draw do
+
+  devise_for :users do
  
-  devise_for :users do 
+  end
    #get "/users/sign_out" => "devise/sessions#destroy", :as => :destroy_user_session
-   end
+
    
   resources :products 
     

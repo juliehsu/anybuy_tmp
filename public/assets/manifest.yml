@@ -10,12 +10,10 @@ coins-7000-icon.png: coins-7000-icon-b82b3eb918ee887a38c684172a67b22f.png
 coins-700000-icon.png: coins-700000-icon-bed9b1962e69799251aa491461449b2d.png
 dark.png: dark-46c557402b81f226569a0b49b534ea27.png
 fake.png: fake-0dfc4a8027581b8612b88ef57163280f.png
-glyphicons-halflings-white.png: glyphicons-halflings-white-13553a5bf21ae3cc374006592488ec64.png
-glyphicons-halflings.png: glyphicons-halflings-ab3144065a860d198f1d7d9a4882640c.png
-home-icon .png: home-icon -53c9254c4beb02d392ffccb465879167.png
+light_wool.png: light_wool-673032862787ff6581dc4fe57f62f2ff.png
 white_texture.png: white_texture-21831d2d26da60ed7561502d2efd21a8.png
-application.js: application-b44ad97c5bc7a542b5e58c8828a967f3.js
-application.css: application-f6ae13df9e3ddacf70ace398bbe1e255.css
+application.js: application-9f0345419ac7eb488ef451ecff88fbd7.js
+application.css: application-2221b1d59fb3a6827034dbb56b278c7d.css
 fontawesome-webfont.eot: fontawesome-webfont-287783cadaa9dc095f6090d113203041.eot
 fontawesome-webfont.svg: fontawesome-webfont-4d19fdd70a080778557b652cb4868557.svg
 fontawesome-webfont.ttf: fontawesome-webfont-6d50e97a37d94b04137de6851ce1c095.ttf
@@ -296,3 +294,5 @@ jquery-ui/ui-icons_2e83ff_256x240.png: jquery-ui/ui-icons_2e83ff_256x240-efb394f
 jquery-ui/ui-icons_454545_256x240.png: jquery-ui/ui-icons_454545_256x240-17e6740beb176dd87da44be76c94bb47.png
 jquery-ui/ui-icons_888888_256x240.png: jquery-ui/ui-icons_888888_256x240-5b928d6b862809eb8130d7b7e0b51a1d.png
 jquery-ui/ui-icons_cd0a0a_256x240.png: jquery-ui/ui-icons_cd0a0a_256x240-635d34cf8bf22d711a729017ab9aaebe.png
+glyphicons-halflings-white.png: glyphicons-halflings-white-13553a5bf21ae3cc374006592488ec64.png
+glyphicons-halflings.png: glyphicons-halflings-ab3144065a860d198f1d7d9a4882640c.png

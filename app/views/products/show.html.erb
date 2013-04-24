@@ -23,20 +23,19 @@
 		</div>
 		
 		<div class="bid-info countdown_holder">
+		
 			<div class="price"><%= @product.price %>元</div>
-            <% @time = @product.end_at.to_i %>
+			<% @time = @product.end_at.to_i %>
             <%= content_tag(:span, "--:--:--",:class => "countdown countthis", :time => @time) %>
+			
 			<div class="picture"><img src="http://placehold.it/70x70"/></div>
-			<form action="/bid?id=5" class="button_to" method="post">
-				<div>
-					<input class="bidsubmit btn span2 btn-danger" disabled="disabled" type="submit" value="下標"><input name="authenticity_token" type="hidden" value="osZgd7C46d7adPeF5C5t4q/om8Bpk57aYjEa8LLxoIs=">
-				</div>
-			</form>
+
+			<%= button_to "下標", { :controller => 'bid', :action => 'biding'}, :id => @product.id  , :class => "bidsubmit btn btn-warning", :disabled => true %>
 			<ul class="current-bid">
 				<li class="highlight">金額：<span class="value"><%= @product.price %>元</span></li>
 				<li>目前贏家：<span class="value"></span></li>
-				<li>目前競標價格：<span class="value"><%= @product.price %>元</span></li>
 				<li>商品定價：<span class="value"><%= @product.primary_price %>元</span></li>
+				<li>目前競標價格：<span class="value"><%= @product.price %>元</span></li>
 				<li><hr/></li>
 				<li>立即購買金額：<span class="value"><%= @product.primary_price %>元</span></li>
 			</ul>
@@ -89,6 +88,7 @@
 
 
 	<hr>
+	<div class="bid_description">
 	<ul class="sp">
 		<li><h4>競標注意事項</h4></li>
 
@@ -114,4 +114,5 @@
 		<li>購買限制說明	 請於本商品得標後的48小時內選擇付款方式如有任何相關問題，請<%= link_to "與我們聯絡",  help_contact_path %>。</li>
 
 	</ul>
+	</div>
 </div>

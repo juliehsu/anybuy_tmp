@@ -92,6 +92,17 @@
 	background:#F9DDB8;
 }
 
+#products .btn-warning {
+	width: 90px;
+	height: 35px;
+	font-weight: bolder;
+	font-size:18px;
+}
+
+.kaminari_products {
+	margin-left:360px;
+}
+
 #product_show .product_info > div{
 	/*border: 1px solid #333;*/
 	height:400px;
@@ -265,4 +276,28 @@
 	margin-bottom:6px;
 	text-align:center;
 	color:rgb(255, 116, 0);
+}
+
+#product_show .bid_description {
+	margin:0;
+	padding:10px;
+	text-align:left;
+	font-size:14px;
+	background: #FFFFFF;
+	border: 3px solid #eee;
+	padding:10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+#product_show .btn-warning {
+	width: 90px;
+	height: 35px;
+	font-weight: bolder;
+	font-size:18px;
+}
+
+#product_new .btn {
+	display: inline-block;
+	display: -moz-inline-stack;
 }

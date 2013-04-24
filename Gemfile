@@ -9,6 +9,9 @@ gem 'sqlite3'
 gem 'mysql2'
 #外掛
 gem 'devise', '2.1.2'         #會員登入界面
+gem "omniauth", '~>1.1.4'       #第三方登入平台
+gem "omniauth-facebook"       #第三方登入平台(facebook)
+gem "omniauth-twitter"        #第三方登入平台(twitter)
 gem 'paperclip', '3.4.0'
 gem 'rails_admin', '0.3.0'    #後台管理
 gem 'magic_encoding' #utf-8

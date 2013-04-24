@@ -1,4 +1,4 @@
-Paperclip.options[:command_path] = "/usr/local/bin/"
+Paperclip.options[:command_path] = "/usr/local/bin"
 Paperclip.options[:swallow_stderr] = false
 
 def run cmd, params = "", expected_outcodes = 0

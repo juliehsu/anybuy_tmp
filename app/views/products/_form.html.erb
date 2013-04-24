@@ -23,14 +23,13 @@
       
       <%= f.input :price, label:"起標價格", input_html: { class: 'span2' } %>
 
-      <%= f.input :end_at, label:'結束時間', start_year: Time.now.year, end_year: Time.now.year, input_html: { class: 'span2' } %>
- 
- </div>
-<%= f.fields_for :images do |image_form| %>
-  <div class="asset field">
-    <%= image_form.file_field :image %>
-  </div>
-<% end %>
+      <%= f.input :end_at, label:'結標時間', start_year: Time.now.year, end_year: Time.now.year, input_html: { class: 'span2' } %>
 
+        <%= f.simple_fields_for :images do |image_form| %>
+
+    <%= image_form.input :image, label: "商品圖片" %>
+
+<% end %>
+ </div>
   
 

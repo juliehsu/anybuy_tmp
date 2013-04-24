@@ -20,7 +20,12 @@
         font-size:14px
 }
 
-.kaminari {
+.kaminari_message {
         margin-left:310px;
 
+}
+
+#message_new .btn-info {
+        display: inline-block;
+        display: -moz-inline-stack;
 }
