@@ -1,13 +1,14 @@
-<div class="ab-container" >
 
-	<h3 class="user_title">會員登入</h3>
+<div class="ab-container" id="login" >
+
+	<h3>會員登入</h3>
 	<hr>
+<%= link_to image_tag("facebook.png", :size => "64x64", :alt => "Facebook"), user_omniauth_authorize_path(:facebook), :class => 'facebook_login' %>
+	<%= simple_form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => { :class => 'login_form'} ) do |f| %>
 
-	<%= simple_form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => { :class => 'form-horizontal'} ) do |f| %>
+		<%= f.input :username, label:'帳號', :autofocus => true, :required => true %>
 
-		<%= f.input :username, label:'帳號', :autofocus => true, :required => true ,:wrapper => :bootstrap %>
-
-		<%= f.input :password, label:'密碼', hint: false, :required => true %>
+		<%= f.input :password, label:'密碼', :required => true %>
 
 		<% if devise_mapping.rememberable? %>
 
@@ -15,17 +16,17 @@
 
 		<% end %>
 		
-	<%= link_to image_tag("facebook.png", :size => "64x64", :alt => "Facebook"), user_omniauth_authorize_path(:facebook) %>
-	
-	<div class="control-group">
-		<div class="controls"><%= f.submit "登入", :class => "btn btn-primary span3", :id => 'loginbtn' %></div>
-	</div>
+
+		<%= f.submit "登入", :class => "btn btn-primary span3", :id => 'loginbtn' %>
 
 
-	<% end %>
 
-	<%= link_to "註冊", new_registration_path(resource_name), :class => "log1" %><span>|</span>
-	<%= link_to "忘記密碼?", new_password_path(resource_name), :class => "log2" %>
+<% end %>
+
+
+	<%= link_to "註冊", new_registration_path(resource_name), :class => "link_registrations" %><span>|</span>
+	<%= link_to "忘記密碼?", new_password_path(resource_name), :class => "link_password" %>
+		
 
 </div>
 
