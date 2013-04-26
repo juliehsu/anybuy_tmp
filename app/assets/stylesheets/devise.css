@@ -54,10 +54,38 @@
 		font-size:16px;
 }
 
-#login .btn-primary {
+#login .btn-primary{
 		margin-left:140px;
 }
 
-#loggin .link_registrations .link_password {
+#login .link_registrations .link_password {
+		margin:0;
+}
+
+#passwords .link_registrations .link_login {
+		margin:0;
+}
+
+#passwords .control-label{
+		text-align: left;
+		padding-left: 30px;
+		width:160px;
+		display: inline-block;
+		font-size:16px;
+}
+
+#passwords .controls {
+		#display: inline-block;
+		width:300px;
+		margin: 20px 60px 10px 0;
+}
+
+#passwords .btn-primary {
+		margin:0 0 30px 200px;
+		width:80px;
+		display: inline-block;
+}
+
+#passwords p{
 		margin:0;
 }

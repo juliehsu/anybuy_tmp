@@ -1,12 +1,16 @@
-<h2>忘記密碼?</h2>
+<div class="ab-container" id="passwords" >
+<h4>查詢密碼?</h4>
+<hr>
 
-<%= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post }) do |f| %>
-  <%= devise_error_messages! %>
+<%= simple_form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post }) do |f| %>
 
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email %></div>
+  <%= f.input :email , label: false, placeholder: '請輸入您的電子信箱' %>
+  <p>按下確認鍵後,我們會再寄一組新的密碼至您的信箱</p>
 
-  <div><%= f.submit "Send me reset password instructions" %></div>
+  <%= f.submit "確認", :class => 'btn btn-primary'%>
+  
 <% end %>
 
-<%= render "devise/shared/links" %>
+	<%= link_to "登入", new_session_path(resource_name), :class => "link_login"%><span>|</span>
+    <%= link_to "註冊", new_registration_path(resource_name), :class => "link_registrations" %>
+</div>
