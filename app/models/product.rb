@@ -1,6 +1,6 @@
 # -*- encoding : utf-8 -*-
 class Product < ActiveRecord::Base
-   has_many :categoriess, :dependent => :destroy
+   has_many :categoriess
    has_many :images, :dependent => :destroy
    has_many :bids
    has_many :users, :through => :bids
