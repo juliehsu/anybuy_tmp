@@ -3,10 +3,13 @@
 
 	<h3>會員登入</h3>
 	<hr>
+	<div class="alert-message info">
+    <%= content_tag :div, flash[:bootstrup] %>
+  </div>
 <%= link_to image_tag("facebook.png", :size => "64x64", :alt => "Facebook"), user_omniauth_authorize_path(:facebook), :class => 'facebook_login' %>
 	<%= simple_form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => { :class => 'login_form'} ) do |f| %>
 
-		<%= f.input :username, label:'帳號', :autofocus => true, :required => true %>
+		<%= f.input :cname, label:'帳號', :autofocus => true, :required => true %>
 
 		<%= f.input :password, label:'密碼', :required => true %>
 
