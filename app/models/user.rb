@@ -23,7 +23,7 @@ class User < ActiveRecord::Base
   validates_acceptance_of :terms_of_service, :message => "請勾選"
   validates :username, :cname, :presence => true,
 	    :length => {:minimum => 4, :maximum => 20, :message => "長度不正確"},
-	    :uniqueness => true
+	    :uniqueness => { :message => "姓名重複" }
 	    
   validates :password, :password_confirmation, :presence => true,
 	    :length => {:minimum => 6, :message => "最少6個字"}
