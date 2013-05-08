@@ -18,10 +18,12 @@ class User < ActiveRecord::Base
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :username, :cname, :phone, :birthday, :nid, :address, :terms_of_service, :name, :uid, :provider
   validates_presence_of :email, :password, :password_confirmation, :username, :cname, :phone, :birthday, :nid, :address, :message => "不能空白喔"
+  
   #validates_confirmation_of :password
   validates_acceptance_of :terms_of_service, :message => "請勾選"
   validates :username, :cname, :presence => true,
-	    :length => {:minimum => 2, :maximum => 10, :message => "長度不正確"}
+	    :length => {:minimum => 4, :maximum => 20, :message => "長度不正確"},
+	    :uniqueness => true
 	    
   validates :password, :password_confirmation, :presence => true,
 	    :length => {:minimum => 6, :message => "最少6個字"}

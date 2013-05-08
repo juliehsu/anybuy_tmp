@@ -3,11 +3,10 @@ class ProductsController < ApplicationController
 #http_basic_authenticate_with :name => "admin", :password => "123"  
  before_filter :authenticate_user! , :except => [ :show, :index ]	
  
- # GET /products
-  # GET /products.json
   def index
     @title = "AnyBuy"
-    @products = Product.order("created_at DESC").page(params[:page]).per(12)
+    @products_order = Product.where(["created_at > ?" , Time.now - 3.day] ).order("created_at  DESC")
+    @products = @products_order.page(params[:page]).per(12)
     @bid_user = User.find_by_sql("SELECT  users.username FROM  products, users
                                        WHERE products.winner_id = users.id")
     respond_to do |format|
@@ -16,8 +15,6 @@ class ProductsController < ApplicationController
     end
   end
 
-  # GET /products/1
-  # GET /products/1.json
   def show
     @product = Product.find(params[:id])
     @title = @product.title
@@ -29,8 +26,7 @@ class ProductsController < ApplicationController
     end
   end
 
-  # GET /products/new
-  # GET /products/new.json
+
   def new
     if current_user && current_user.is_admin
       @title = "新商品上架"
@@ -48,14 +44,13 @@ class ProductsController < ApplicationController
     end
   end
 
-  # GET /products/1/edit
+
   def edit
     @product = Product.find(params[:id])
     3.times { @product.images.build }
   end
 
-  # POST /products
-  # POST /products.json
+
   def create
     @product = Product.new(params[:product])
      
@@ -70,8 +65,7 @@ class ProductsController < ApplicationController
     end
   end
 
-  # PUT /products/1
-  # PUT /products/1.json
+
   def update
     @product = Product.find(params[:id])
     
@@ -86,8 +80,7 @@ class ProductsController < ApplicationController
     end
   end
 
-  # DELETE /products/1
-  # DELETE /products/1.json
+
   def destroy
     @product = Product.find(params[:id])
     @product.destroy
