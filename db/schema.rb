@@ -74,13 +74,17 @@ ActiveRecord::Schema.define(:version => 20130424063924) do
   create_table "products", :force => true do |t|
     t.string   "title"
     t.text     "description"
-    t.decimal  "price",         :precision => 10, :scale => 0
-    t.decimal  "primary_price", :precision => 10, :scale => 0
+    t.decimal  "price",                      :precision => 10, :scale => 0
+    t.decimal  "primary_price",              :precision => 10, :scale => 0
     t.integer  "winner_id"
     t.integer  "categories_id"
-    t.datetime "created_at",                                   :null => false
+    t.datetime "created_at",                                                :null => false
     t.datetime "end_at"
-    t.datetime "updated_at",                                   :null => false
+    t.datetime "updated_at",                                                :null => false
+    t.string   "excerpt_image_file_name"
+    t.string   "excerpt_image_content_type"
+    t.integer  "excerpt_image_file_size"
+    t.datetime "excerpt_image_updated_at"
   end
 
   create_table "users", :force => true do |t|

@@ -1,11 +1,12 @@
 
 <div class="ab-container" id="login" >
 
-	<h3>會員登入</h3>
+<h3>會員登入</h3>
 	<hr>
 	<div class="alert-message info">
     <%= content_tag :div, flash[:bootstrup] %>
-  </div>
+</div>
+
 <%= link_to image_tag("facebook.png", :size => "64x64", :alt => "Facebook"), user_omniauth_authorize_path(:facebook), :class => 'facebook_login' %>
 	<%= simple_form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => { :class => 'login_form'} ) do |f| %>
 
@@ -19,10 +20,9 @@
 
 		<% end %>
 		
+		<%= render "devise/shared/captcha" %>
 
 		<%= f.submit "登入", :class => "btn btn-primary span3", :id => 'loginbtn' %>
-
-
 
 <% end %>
 
@@ -30,7 +30,4 @@
 	<%= link_to "註冊", new_registration_path(resource_name), :class => "link_registrations" %><span>|</span>
 	<%= link_to "忘記密碼?", new_password_path(resource_name), :class => "link_password" %>
 		
-
 </div>
-
-
