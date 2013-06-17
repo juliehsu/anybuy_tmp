@@ -16,5 +16,5 @@
 	</li>
 <% else %>
 	<li><%= link_to '註冊', new_registration_path(:user) %></li>
-	<li><a href="#loginModal" class='fancy'>登入</a></li>
+	<li><%= link_to "登入", new_session_path(:user) %></li>
 <% end %>

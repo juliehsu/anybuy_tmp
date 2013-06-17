@@ -1,5 +1,4 @@
 $(document).ready(function(){
-	$(':submit').attr('disabled',true);
 	$('a.fancy').fancybox();
 	$('fancy.a').fancybox();
 });

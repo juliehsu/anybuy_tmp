@@ -1,11 +1,13 @@
 <% 
-		@option =  ['book','clock','heart','none','pencil']
-		@captcha =  @option .shuffle.first
+	@option =  ['book','clock','heart','none','pencil']
+	@captcha =  @option .shuffle.first
 %>
 <div style="padding:20px 60px 20px 60px;">
-	<h3><%=  "Please click #{@captcha}..." %></h3>
-	<% @option.each do |item| %>
-		<%= link_to image_tag("captcha/item-#{item}.png", :size => "40x40", :alt => item) ,"#",
-				:id=>item ,:onclick=>"check_captcha('#{@captcha}','#{item}')" %>
+	<h4><%=  "Please click the icon which is bordered" %></h4>
+	<% @option.shuffle.each do |item| %>
+		<%= link_to image_tag("captcha/item-#{item}.png", :size => "40x40", :alt => item,
+		:style=>"border: blue 2px solid"  ) ,"#",:id=>item ,
+		:onclick=>"check_captcha('#{@captcha}','#{item}')"  if item==@captcha  %>
+		<%= image_tag("captcha/item-#{item}.png", :size => "40x40", :alt =>item) unless item==@captcha  %>
 	<% end -%>
 </div>
